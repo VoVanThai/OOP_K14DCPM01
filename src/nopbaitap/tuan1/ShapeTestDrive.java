@@ -2,17 +2,19 @@ package nopbaitap.tuan1;
 
 public class ShapeTestDrive {
     public static void main(String[] args) {
-        Square square = new Square();
         Circle circle = new Circle();
-        Triangle triangle = new Triangle();
+        circle.setSound("circle.aif");
+        circle.rotate();
+        circle.playSound();
 
-        square.turn();
-        square.play();
 
-        circle.turn();
-        circle.play();
 
-        triangle.turn();
-        triangle.play();
+        System.out.println("Testing Amoeba ...");
+        Amoeba amoeba = new Amoeba();
+        amoeba.setxPoint(5);
+        amoeba.setyPoint(10);
+        amoeba.setSound("amoebaMusic.hif");
+        amoeba.rotate();
+        amoeba.playSound();
     }
 }
